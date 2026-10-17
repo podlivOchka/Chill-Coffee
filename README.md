@@ -1,16 +1,40 @@
-# React + Vite
+# Chill Coffee 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules;
+Доработка исходного проекта `0Badr0/Chill-Coffee-2.0` на React 19 и Vite 8 с сохранением фирменных материалов, каталога, команды бренда и блока Chill Whey.
 
-Currently, two official plugins are available:
+## Запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Нужен Node.js 22.12+ (рекомендуется актуальный Node 22 LTS).
 
-## React Compiler
+```sh
+npm ci
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Сборка
 
-## Expanding the ESLint configuration
+```sh
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Готовый сайт находится в `dist/`. Относительные пути позволяют размещать его в репозитории с любым именем и на обычном статическом хостинге. Серверная часть и ключи API не нужны.
+
+## GitHub Pages
+
+1. Создай репозиторий в своём аккаунте и загрузи исходники.
+2. Открой Settings → Pages → Build and deployment → Source → GitHub Actions.
+3. Workflow `.github/workflows/deploy.yml` собирает и публикует ветку `main`. Его можно запустить вручную во вкладке Actions.
+
+## Содержимое
+
+- Light — три вкуса; Hard — четыре, включая «Бамбл Апельсин». Chill Brew оформлен как предстоящий запуск, «Скоро в продаже».
+- Арман Царукян подписан отдельно от Гамзата Гасанова. Остальные портреты и имена сохранены из исходного проекта.
+- Chill Whey — «Скоро в продаже», «с добавлением натурального кофе».
+- Характеристики Light и классического Hard разделены. Для апельсинового вкуса не приписаны неподтверждённые данные.
+- Исходные PNG сохранены в `source-assets/` (favicon — в `public/images/`); на сайте используются WebP и локальные шрифты.
+- Покупка ведёт на маркетплейсы, сотрудничество — в почтовое приложение. Сайт не имитирует отправку заявок.
+- При прокрутке работают сцены трёх линеек, движение банок и параллакс изображений. Галерея поддерживает свайп, кнопки и полноразмерный просмотр.
+- В блоке о бренде и галерее используются актуальные банки из каталога. Апельсиновый рендер согласован с остальными Hard по форме, масштабу и освещению.
+- Кнопка с паузой в шапке отключает декоративное движение. Настройка уменьшенной анимации устройства учитывается автоматически.
+
+Источники изменений — в `CHANGELOG.md`.

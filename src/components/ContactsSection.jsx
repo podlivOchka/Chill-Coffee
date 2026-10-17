@@ -1,57 +1,34 @@
-import SectionTitle from './SectionTitle'
-import { img } from '../utils/getImage'
-
-function ContactsSection() {
+export default function ContactsSection() {
   return (
-    <section id="contacts" className="section section--soft">
+    <section id="contacts" className="section contacts-section">
       <div className="container">
-        <SectionTitle
-          centered
-          label="Контакты"
-          title="Свяжитесь с нами"
-          text="По вопросам сотрудничества, продукции и бренда."
-        />
-
-        <div className="contacts-grid">
-          <a className="contact-card glass-card" href="mailto:chillco.rus@gmail.com">
-            <span className="contact-card__icon">✉️</span>
-            <h3>Email</h3>
-            <p>chillco.rus@gmail.com</p>
+        <p className="eyebrow reveal">ОСТАЁМСЯ НА СВЯЗИ</p>
+        <div className="contact-main reveal">
+          <a href="mailto:chillco.rus@gmail.com">
+            chillco.rus@gmail.com <span aria-hidden="true">↗</span>
           </a>
-
-          <a className="contact-card glass-card" href="tel:+79886488705">
-            <span className="contact-card__icon">📞</span>
-            <h3>Телефон</h3>
-            <p>8 988 648 87 05</p>
-          </a>
-
+          <a href="tel:+79886488705">+7 (988) 648-87-05</a>
+        </div>
+        <div className="contact-socials reveal">
           <a
-            className="contact-card glass-card"
             href="https://www.instagram.com/chillcoffee_rus/"
             target="_blank"
             rel="noreferrer"
           >
-            <span className="contact-card__icon contact-card__icon--image">
-              <img src={img('inst-logo.png')} alt="Instagram" />
-            </span>
-            <h3>Instagram бренда</h3>
-            <p>@chillcoffee_rus</p>
+            <span>INSTAGRAM БРЕНДА</span>@chillcoffee_rus ↗
           </a>
-
           <a
-            className="contact-card glass-card"
             href="https://www.instagram.com/gasanov_gamzat_/"
             target="_blank"
             rel="noreferrer"
           >
-            <span className="contact-card__icon">👤</span>
-            <h3>Основатель</h3>
-            <p>Гасанов Гамзат</p>
+            <span>ОСНОВАТЕЛЬ</span>Гасанов Гамзат ↗
+          </a>
+          <a href="https://chill-coffee.ru/" target="_blank" rel="noreferrer">
+            <span>CHILL COFFEE</span>chill-coffee.ru ↗
           </a>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-export default ContactsSection
